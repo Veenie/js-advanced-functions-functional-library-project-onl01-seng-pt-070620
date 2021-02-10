@@ -111,14 +111,14 @@ const fi = (function() {
           this.flatten(val, false, newArr)
         }
       }
-=======
+
     flatten: function(collection, shallow, newArr=[]) {
       if (!Array.isArray(collection)) return newArr.push(collection)
       if (shallow) {
         newArr.concat.apply([], collection)
 
       } 
->>>>>>> 67f5793a89773db65db808fb56f5c69fd0e29be4
+
       return newArr
     },
 
