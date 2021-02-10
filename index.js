@@ -116,22 +116,7 @@ const fi = (function() {
 
     uniq: function(arr, isSorted=false, callback=false){
       
-      if(isSorted === true){
-      return [...new Set(arr)]}
-      if(callback === false){
-        return [...new Set(arr)]
-      }
-      if(callback !== false){
-        let uniqArr = []
-        let returns = []
-        for(let i =0; i < arr.length; i++){
-        let modifiedVal = callback(arr[i])
-        if(!uniqArr.includes(modifiedVal)){  
-          returns.push(arr[i])
-          uniqArr.push(modifiedVal)}
-        
-      }
-      return returns}
+
       
     },
     
