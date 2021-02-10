@@ -93,7 +93,7 @@ const fi = (function() {
       let newArr = [...arr]
       return newArr.sort(function(a, b) {return callback(a) - callback(b)})
     },
-<<<<<<< HEAD
+
     
      unpack: function(receiver, arr) {
       for (let val of arr)
@@ -111,18 +111,9 @@ const fi = (function() {
           this.flatten(val, false, newArr)
         }
       }
-
-    flatten: function(collection, shallow, newArr=[]) {
-      if (!Array.isArray(collection)) return newArr.push(collection)
-      if (shallow) {
-        newArr.concat.apply([], collection)
-
-      } 
-
-      return newArr
     },
 
-    
+
     uniq: function(arr, isSorted=false, callback=false){
       
       if(isSorted === true){
@@ -134,16 +125,14 @@ const fi = (function() {
         let uniqArr = []
         let returns = []
         for(let i =0; i < arr.length; i++){
-          let modifiedVal = callback(arr[i])
+        let modifiedVal = callback(arr[i])
         if(!uniqArr.includes(modifiedVal)){  
           returns.push(arr[i])
-          uniqArr.push(modifiedVal)
-        }
+          uniqArr.push(modifiedVal)}
         
       }
-      return returns
-    }  
-
+      return returns}
+      
     },
     
     keys: function(obj){
