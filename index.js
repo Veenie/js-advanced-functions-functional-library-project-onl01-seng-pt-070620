@@ -93,6 +93,7 @@ const fi = (function() {
       let newArr = [...arr]
       return newArr.sort(function(a, b) {return callback(a) - callback(b)})
     },
+<<<<<<< HEAD
     
      unpack: function(receiver, arr) {
       for (let val of arr)
@@ -110,6 +111,14 @@ const fi = (function() {
           this.flatten(val, false, newArr)
         }
       }
+=======
+    flatten: function(collection, shallow, newArr=[]) {
+      if (!Array.isArray(collection)) return newArr.push(collection)
+      if (shallow) {
+        newArr.concat.apply([], collection)
+
+      } 
+>>>>>>> 67f5793a89773db65db808fb56f5c69fd0e29be4
       return newArr
     },
 
